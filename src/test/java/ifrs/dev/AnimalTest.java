@@ -86,4 +86,25 @@ public class AnimalTest {
         Assertions.assertNull(retrievedTutor);
     }
 
+    @Test
+    public void testToStringNullNameAndBreed() {
+        animal.setName(null);
+        animal.setBreed(null);
+
+        String expected = "Animal{name='null', breed='null'}";
+        String actual = animal.toString();
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testEqualsSameAnimal() {
+        Animal sameAnimal = new Animal("Luci", "Dog");
+        Assertions.assertTrue(animal.equals(sameAnimal));
+    }
+
+    @Test
+    public void testEquals_DifferentAnimal() {
+        Animal differentAnimal = new Animal("Max", "Cat");
+        Assertions.assertFalse(animal.equals(differentAnimal));
+    }
 }
