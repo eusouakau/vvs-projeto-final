@@ -5,14 +5,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ifrs.dev.models.Animal;
+import ifrs.dev.models.Tutor;
 
 public class AnimalTest {
 
     private Animal animal;
+    private Tutor tutor;
 
     @BeforeEach
     public void setup() {
         animal = new Animal("Luci", "Dog");
+        tutor = new Tutor("Maria", "maria@tst.com");
     }
 
     @Test
@@ -48,5 +51,24 @@ public class AnimalTest {
         String expected = "Animal{name='Luci', breed='Dog'}";
         String actual = animal.toString();
         Assertions.assertEquals(expected, actual);
-    }    
+    } 
+    
+    @Test
+    public void testGetTutor() {
+        animal.setTutor(tutor);
+        Tutor retrievedTutor = animal.getTutor();
+        Assertions.assertEquals(tutor, retrievedTutor);
+    }
+
+    @Test
+    public void testSetTutor() {
+        animal.setTutor(tutor);
+        Tutor retrievedTutor = animal.getTutor();
+        Assertions.assertEquals(tutor, retrievedTutor);
+
+        Tutor newTutor = new Tutor("Joana", "joana@tst.com");
+        animal.setTutor(newTutor);
+        retrievedTutor = animal.getTutor();
+        Assertions.assertEquals(newTutor, retrievedTutor);
+    }
 }
