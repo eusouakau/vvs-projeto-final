@@ -56,4 +56,13 @@ public class Tutor {
     public void addAnimal(Animal animal) {
         animals.add(animal);
     }
+
+    @Override
+    public String toString() {
+        return "Tutor{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
 }
