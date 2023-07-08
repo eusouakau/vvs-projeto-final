@@ -15,6 +15,7 @@ public class Animal {
     private String breed;
     
     public Animal() {
+         //Construtor vazio
     }
     
     @ManyToOne

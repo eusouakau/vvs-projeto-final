@@ -14,6 +14,7 @@ public class Tutor {
     private String email;
 
     public Tutor() {
+        //Construtor vazio
     }
 
     public Long getId() {
