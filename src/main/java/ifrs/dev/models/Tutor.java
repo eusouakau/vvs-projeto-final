@@ -1,5 +1,6 @@
 package ifrs.dev.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -14,7 +15,7 @@ public class Tutor {
     private Long id;
     private String name;
     private String email;
-    private List<Animal> animals;
+    private List<Animal> animals = new ArrayList<>();
 
     public Tutor() {
         // Construtor vazio
