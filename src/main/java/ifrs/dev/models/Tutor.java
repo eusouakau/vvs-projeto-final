@@ -55,8 +55,15 @@ public class Tutor {
     }
 
     public void addAnimal(Animal animal) {
+        if (animals == null) {
+            animals = new ArrayList<>();
+        } else if (animals.contains(animal)) {
+            return; 
+        }
+        
         animals.add(animal);
     }
+       
 
     @Override
     public String toString() {
