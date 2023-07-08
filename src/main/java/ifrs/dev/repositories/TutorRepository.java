@@ -18,4 +18,11 @@ public class TutorRepository implements PanacheRepository<Tutor> {
         return findById(id);
     }
 
+    public Tutor findByName(String name){
+        return find("name", name).firstResult();
+    }
+
+    public Tutor findByEmail(String email){
+        return find("email", email).firstResult();
+    }
 }
