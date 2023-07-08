@@ -43,8 +43,10 @@ public class AnimalTest {
 
     @Test
     public void testToString() {
-        String expected = "Animal{nome='Luci', breed='Dog'}";
+        Animal animal = new Animal("Luci", "Dog");
+    
+        String expected = "Animal{name='Luci', breed='Dog'}";
         String actual = animal.toString();
         Assertions.assertEquals(expected, actual);
-    }
+    }    
 }
