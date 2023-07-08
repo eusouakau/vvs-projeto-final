@@ -60,8 +60,7 @@ public class Tutor {
 
     @Override
     public String toString() {
-        return "Tutor{" +
-                "name='" + name + '\'' +
+        return "Tutor{name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 '}';
     }
