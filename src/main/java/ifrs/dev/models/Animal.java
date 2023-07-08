@@ -18,6 +18,11 @@ public class Animal {
          //Construtor vazio
     }
     
+    public Animal(String name, String breed) {
+        this.name = name;
+        this.breed = breed;
+    }
+    
     @ManyToOne
     private Tutor tutor;
 
