@@ -43,9 +43,12 @@ public class TutorTest {
 
     @Test
     public void testToString() {
-        String expected = "Tutor{nome='Maria', email='maria@tst.com'}";
+        Tutor tutor = new Tutor("Maria", "maria@tst.com");
+
+        String expected = "Tutor{name='Maria', email='maria@tst.com'}";
         String actual = tutor.toString();
         Assertions.assertEquals(expected, actual);
     }
+
 }
 
