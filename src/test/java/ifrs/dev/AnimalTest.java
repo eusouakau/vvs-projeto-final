@@ -70,5 +70,12 @@ public class AnimalTest {
         String expected = "Animal{name='Luci', breed='Dog'}";
         String actual = animal.toString();
         Assertions.assertEquals(expected, actual);
-    } 
+    }
+
+    @Test
+    public void testGetTutorWhenNotSet() {
+        Tutor retrievedTutor = animal.getTutor();
+        Assertions.assertNull(retrievedTutor);
+    }
+
 }
