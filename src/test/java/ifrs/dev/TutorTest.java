@@ -85,5 +85,52 @@ public class TutorTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void testSetNameError() {
+        tutor.setName("Joana");
+        String name = tutor.getName();
+        Assertions.assertNotEquals("Maria", name);
+        Assertions.assertEquals("Joana", name);
+    }
+
+    @Test
+    public void testSetEmailError() {
+        tutor.setEmail("joana@tst.com");
+        String email = tutor.getEmail();
+        Assertions.assertNotEquals("maria@tst.com", email); 
+        Assertions.assertEquals("joana@tst.com", email);
+    }
+
+    @Test
+    public void testGetAnimalsError() {
+        tutor.addAnimal(animal1);
+        tutor.addAnimal(animal2);
+
+        List<Animal> animals = tutor.getAnimals();
+
+        Assertions.assertNotNull(animals);
+        Assertions.assertEquals(2, animals.size());
+        Assertions.assertTrue(animals.contains(animal1));
+        Assertions.assertFalse(animals.contains(new Animal("Unknown", "Unknown")));
+    }
+
+    @Test
+    public void testAddAnimalError() {
+        List<Animal> animals = tutor.getAnimals();
+        Assertions.assertNotNull(animals);
+        Assertions.assertEquals(0, animals.size());
+
+        tutor.addAnimal(animal1);
+        Assertions.assertEquals(1, animals.size());
+        Assertions.assertTrue(animals.contains(animal1));
+
+        tutor.addAnimal(animal2);
+        Assertions.assertEquals(2, animals.size());
+        Assertions.assertTrue(animals.contains(animal2));
+
+        tutor.addAnimal(animal1);
+        Assertions.assertEquals(2, animals.size());
+    }
+
 }
 
