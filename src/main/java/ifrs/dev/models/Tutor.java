@@ -17,6 +17,11 @@ public class Tutor {
         //Construtor vazio
     }
 
+    public Tutor(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
+    
     public Long getId() {
         return id;
     }
