@@ -18,4 +18,12 @@ public class AnimalRepository implements PanacheRepository<Animal> {
         return findById(id);
     }
 
+    public Animal findByName(String name){
+        return find("name", name).firstResult();
+    }
+
+    public Animal findByBreed(String breed){
+        return find("breed", breed).firstResult();
+    }
+
 }
