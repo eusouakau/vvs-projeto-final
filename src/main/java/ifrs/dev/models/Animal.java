@@ -14,41 +14,55 @@ public class Animal {
     private String name;
     private String breed;
     
+    @ManyToOne
+    private Tutor tutor;
+
     public Animal() {
-         //Construtor vazio
+         // Construtor vazio
     }
     
     public Animal(String name, String breed) {
         this.name = name;
         this.breed = breed;
     }
-    
-    @ManyToOne
-    private Tutor tutor;
-
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getBreed() {
         return breed;
     }
+
     public void setBreed(String breed) {
         this.breed = breed;
     }
+
     public Tutor getTutor() {
         return tutor;
     }
+
     public void setTutor(Tutor tutor) {
         this.tutor = tutor;
     }
+    
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", breed='" + breed + '\'' +
+                '}';
+    }
 }
-
