@@ -1,5 +1,7 @@
 package ifrs.dev.models;
 
+import java.util.Objects;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -63,4 +65,17 @@ public class Animal {
                 ", breed='" + breed + '\'' +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Animal other = (Animal) obj;
+        return Objects.equals(name, other.name) && Objects.equals(breed, other.breed);
+    }
+
 }
