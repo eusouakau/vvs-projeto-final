@@ -78,4 +78,12 @@ public class AnimalTest {
         Assertions.assertNull(retrievedTutor);
     }
 
+    @Test
+    public void testSetTutorToNull() {
+        animal.setTutor(tutor);
+        animal.setTutor(null);
+        Tutor retrievedTutor = animal.getTutor();
+        Assertions.assertNull(retrievedTutor);
+    }
+
 }
