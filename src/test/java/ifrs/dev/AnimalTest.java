@@ -43,15 +43,6 @@ public class AnimalTest {
         String breed = animal.getBreed();
         Assertions.assertEquals("Cat", breed);
     }
-
-    @Test
-    public void testToString() {
-        Animal animal = new Animal("Luci", "Dog");
-    
-        String expected = "Animal{name='Luci', breed='Dog'}";
-        String actual = animal.toString();
-        Assertions.assertEquals(expected, actual);
-    } 
     
     @Test
     public void testGetTutor() {
@@ -71,4 +62,13 @@ public class AnimalTest {
         retrievedTutor = animal.getTutor();
         Assertions.assertEquals(newTutor, retrievedTutor);
     }
+
+    @Test
+    public void testToString() {
+        Animal animal = new Animal("Luci", "Dog");
+    
+        String expected = "Animal{name='Luci', breed='Dog'}";
+        String actual = animal.toString();
+        Assertions.assertEquals(expected, actual);
+    } 
 }
