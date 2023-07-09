@@ -1,6 +1,6 @@
 # Plano de Testes
 
-## Para a verificação estática foi utilizada a extenção SonarLint
+## Para a verificação estática foi utilizada a extensão SonarLint
 
 ## Testes de `Animal`
 
