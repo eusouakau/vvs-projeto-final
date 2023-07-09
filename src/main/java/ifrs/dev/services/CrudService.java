@@ -1,8 +1,8 @@
 package ifrs.dev.services;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
@@ -12,7 +12,7 @@ import java.util.List;
 @ApplicationScoped
 public class CrudService<T> {
 
-    @Inject
+    @PersistenceContext
     EntityManager entityManager;
 
     private final Class<T> entityClass;
